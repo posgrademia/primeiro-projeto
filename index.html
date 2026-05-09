@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículo | Weslley Henrique</title>
+  <title>Weslley Henrique | Desenvolvedor & IA</title>
+  <meta name="description" content="Currículo e perfil profissional — tecnologia, IA e experiência em empresas de referência.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -12,132 +13,179 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page-frame">
-    <section class="dashboard">
-      <header class="header">
-        <a href="#inicio" class="brand">
-          <span class="brand-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
-          <strong>Weslley</strong>
-        </a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand">
+        <span class="brand-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <strong>Weslley</strong>
+      </a>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#formacao">Formação</a>
+        <a href="#idiomas">Idiomas</a>
+        <a href="#contato">Contato</a>
+      </nav>
 
-        <nav class="nav-links" aria-label="Navegação principal">
-          <a href="#inicio">Início</a>
-          <a href="#experiencia">Experiência</a>
-          <a href="#formacao">Formação</a>
-          <a href="#idiomas">Idiomas</a>
-        </nav>
+      <button class="theme-toggle" type="button" aria-label="Alternar tema">
+        <i class="fa-solid fa-moon"></i>
+        <span>Modo</span>
+      </button>
 
-        <button class="theme-toggle" type="button" aria-label="Alternar tema">
-          <i class="fa-solid fa-moon"></i>
-          <span>Modo</span>
-        </button>
-      </header>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
 
-      <section id="inicio" class="hero-card reveal">
+  <main class="landing">
+    <section id="inicio" class="hero-landing reveal">
+      <div class="container hero-grid">
         <div class="hero-copy">
           <span class="pill"><span class="pill-label">IA + Tecnologia</span></span>
-          <h1>Weslley</h1>
-          <p>O impossível é apenas uma questão de tempo... E de qual IA você está usando!</p>
+          <h1>Weslley Henrique</h1>
+          <p class="hero-lead">O impossível é apenas uma questão de tempo... E de qual IA você está usando!</p>
+          <div class="hero-actions">
+            <a href="mailto:weslley@gmai.com" class="btn-primary"><i class="fa-solid fa-envelope"></i> Enviar email</a>
+            <a href="https://linkedin.com/weslley" target="_blank" rel="noopener noreferrer" class="btn-secondary"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          </div>
           <div class="hero-meta">
             <span><i class="fa-solid fa-star"></i> 4.8</span>
             <span>desde 2026</span>
           </div>
         </div>
 
-        <div class="hero-photo">
-          <img src="foto.png" alt="Foto de Weslley Henrique">
-          <span class="price-badge">AI<br><strong>DEV</strong></span>
-        </div>
-
-        <div class="thumb-row" aria-label="Destaques">
-          <span><i class="fa-brands fa-microsoft"></i></span>
-          <span><i class="fa-brands fa-google"></i></span>
-          <span><i class="fa-solid fa-brain"></i></span>
-        </div>
-      </section>
-
-      <aside class="side-card blue-card reveal">
-        <div>
-          <h2>Contato</h2>
-          <p>Vamos conversar sobre tecnologia?</p>
-        </div>
-        <img src="foto.png" alt="Foto pequena de Weslley Henrique">
-        <a href="mailto:weslley@gmai.com" class="dark-button">Enviar email</a>
-        <span class="round-action"><i class="fa-solid fa-paper-plane"></i></span>
-      </aside>
-
-      <aside class="side-card orange-card reveal">
-        <h2>LinkedIn</h2>
-        <p>Perfil profissional e networking.</p>
-        <a href="https://linkedin.com/weslley" target="_blank" rel="noopener noreferrer" class="dark-button">Acessar</a>
-        <span class="floating-price"><i class="fa-brands fa-linkedin-in"></i></span>
-      </aside>
-
-      <section id="experiencia" class="picks-card reveal">
-        <div class="section-heading">
-          <h2>Top-2 Experiências</h2>
-          <p>Trajetória profissional em tecnologia</p>
-        </div>
-
-        <article class="list-item">
-          <span class="item-icon microsoft"><i class="fa-brands fa-microsoft"></i></span>
-          <div>
-            <h3>Microsoft</h3>
-            <p>Programador Especialista</p>
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <img src="foto.png" alt="Foto de Weslley Henrique" width="300" height="380">
+            <span class="price-badge">AI<br><strong>DEV</strong></span>
           </div>
-          <strong>2 anos</strong>
-          <span class="plus"><i class="fa-solid fa-plus"></i></span>
-        </article>
-
-        <article class="list-item">
-          <span class="item-icon google"><i class="fa-brands fa-google"></i></span>
-          <div>
-            <h3>Google</h3>
-            <p>Gerente de TI</p>
-          </div>
-          <strong>10 anos</strong>
-          <span class="plus"><i class="fa-solid fa-plus"></i></span>
-        </article>
-      </section>
-
-      <section id="formacao" class="info-card education-card reveal">
-        <span class="card-kicker">Formação</span>
-        <h2>Base acadêmica</h2>
-        <div class="info-row">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <div>
-            <h3>Ciência da Computação</h3>
-            <p>USP</p>
+          <div class="thumb-row" aria-label="Áreas de atuação">
+            <span title="Microsoft"><i class="fa-brands fa-microsoft"></i></span>
+            <span title="Google"><i class="fa-brands fa-google"></i></span>
+            <span title="IA"><i class="fa-solid fa-brain"></i></span>
           </div>
         </div>
-        <div class="info-row">
-          <i class="fa-solid fa-robot"></i>
-          <div>
-            <h3>Pós em IA</h3>
-            <p>Havard</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="idiomas" class="info-card languages-card reveal">
-        <span class="card-kicker">Idiomas</span>
-        <h2>Comunicação</h2>
-        <div class="language-line">
-          <span>Inglês</span>
-          <strong>Avançado</strong>
-        </div>
-        <div class="progress"><span style="width: 90%"></span></div>
-        <div class="language-line">
-          <span>Francês</span>
-          <strong>Intermediário</strong>
-        </div>
-        <div class="progress"><span style="width: 70%"></span></div>
-      </section>
+      </div>
     </section>
+
+    <section class="trust-strip reveal" aria-label="Ecossistema">
+      <div class="container trust-inner">
+        <span class="trust-label">Trajetória em</span>
+        <div class="trust-logos">
+          <span><i class="fa-brands fa-microsoft"></i> Microsoft</span>
+          <span><i class="fa-brands fa-google"></i> Google</span>
+          <span><i class="fa-solid fa-brain"></i> Inteligência artificial</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section-block reveal">
+      <div class="container">
+        <header class="section-intro">
+          <h2 class="section-title">Contato rápido</h2>
+          <p class="section-subtitle">Duas formas de iniciar uma conversa sobre tecnologia e projetos.</p>
+        </header>
+        <div class="cta-cards">
+          <aside class="side-card blue-card">
+            <div>
+              <h2>Email</h2>
+              <p>Mensagem direta para propostas e networking.</p>
+            </div>
+            <img src="foto.png" alt="" width="140" height="140" loading="lazy">
+            <a href="mailto:weslley@gmai.com" class="dark-button">Enviar email</a>
+            <span class="round-action" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></span>
+          </aside>
+
+          <aside class="side-card orange-card">
+            <h2>LinkedIn</h2>
+            <p>Perfil profissional e networking.</p>
+            <a href="https://linkedin.com/weslley" target="_blank" rel="noopener noreferrer" class="dark-button">Acessar perfil</a>
+            <span class="floating-price" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section-block section-alt reveal">
+      <div class="container">
+        <header class="section-intro">
+          <h2 class="section-title">Experiência</h2>
+          <p class="section-subtitle">Trajetória profissional em tecnologia — destaques mais relevantes.</p>
+        </header>
+
+        <div class="picks-card">
+          <article class="list-item">
+            <span class="item-icon microsoft"><i class="fa-brands fa-microsoft"></i></span>
+            <div>
+              <h3>Microsoft</h3>
+              <p>Programador Especialista</p>
+            </div>
+            <strong>2 anos</strong>
+            <span class="plus" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+          </article>
+
+          <article class="list-item">
+            <span class="item-icon google"><i class="fa-brands fa-google"></i></span>
+            <div>
+              <h3>Google</h3>
+              <p>Gerente de TI</p>
+            </div>
+            <strong>10 anos</strong>
+            <span class="plus" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block reveal">
+      <div class="container dual-grid">
+        <section id="formacao" class="info-card education-card">
+          <span class="card-kicker">Formação</span>
+          <h2>Base acadêmica</h2>
+          <div class="info-row">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <div>
+              <h3>Ciência da Computação</h3>
+              <p>USP</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <i class="fa-solid fa-robot" aria-hidden="true"></i>
+            <div>
+              <h3>Pós em IA</h3>
+              <p>Havard</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="idiomas" class="info-card languages-card">
+          <span class="card-kicker">Idiomas</span>
+          <h2>Comunicação</h2>
+          <div class="language-line">
+            <span>Inglês</span>
+            <strong>Avançado</strong>
+          </div>
+          <div class="progress"><span style="width: 90%"></span></div>
+          <div class="language-line">
+            <span>Francês</span>
+            <strong>Intermediário</strong>
+          </div>
+          <div class="progress"><span style="width: 70%"></span></div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="site-footer reveal">
+      <div class="container footer-inner">
+        <div class="footer-copy">
+          <strong>Weslley Henrique</strong>
+          <span>Currículo online · 2026</span>
+        </div>
+        <a href="mailto:weslley@gmai.com" class="footer-cta">Vamos conversar</a>
+      </div>
+    </footer>
   </main>
 
   <script src="script.js"></script>
