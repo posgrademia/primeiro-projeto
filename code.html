@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alex Rivera | Systems Architect Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Geist:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glow-cyan {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .progress-gradient {
+            background: linear-gradient(90deg, #4a8eff 0%, #00f0ff 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#2d3449",
+                        "secondary": "#adc7ff",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-surface-variant": "#b9cacb",
+                        "on-secondary": "#002e68",
+                        "surface-tint": "#00dbe9",
+                        "on-primary-fixed": "#002022",
+                        "primary-container": "#00f0ff",
+                        "tertiary-fixed-dim": "#d1bcff",
+                        "tertiary-fixed": "#e9ddff",
+                        "on-tertiary": "#3c0090",
+                        "surface-variant": "#2d3449",
+                        "inverse-primary": "#006970",
+                        "on-error": "#690005",
+                        "tertiary-container": "#e1d2ff",
+                        "surface-bright": "#31394d",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface": "#0b1326",
+                        "surface-container-high": "#222a3d",
+                        "secondary-container": "#4a8eff",
+                        "on-secondary-fixed": "#001a41",
+                        "surface-container": "#171f33",
+                        "on-primary": "#00363a",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#dbfcff",
+                        "secondary-fixed-dim": "#adc7ff",
+                        "primary-fixed": "#7df4ff",
+                        "on-primary-container": "#006970",
+                        "inverse-on-surface": "#283044",
+                        "inverse-surface": "#dae2fd",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#060e20",
+                        "background": "#0b1326",
+                        "tertiary": "#faf3ff",
+                        "on-tertiary-fixed-variant": "#5700c9",
+                        "on-tertiary-container": "#7213ff",
+                        "primary-fixed-dim": "#00dbe9",
+                        "on-secondary-container": "#00285b",
+                        "outline-variant": "#3b494b",
+                        "surface-container-low": "#131b2e",
+                        "outline": "#849495",
+                        "on-secondary-fixed-variant": "#004493",
+                        "on-tertiary-fixed": "#23005b",
+                        "on-background": "#dae2fd",
+                        "surface-dim": "#0b1326",
+                        "on-surface": "#dae2fd",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "max-width": "1200px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Geist"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Geist"],
+                        "body-sm": ["Inter"],
+                        "label-code": ["JetBrains Mono"],
+                        "headline-xl-mobile": ["Geist"],
+                        "headline-xl": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-code": ["13px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-surface-container/50 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="text-headline-md font-headline-md font-bold tracking-tight text-primary uppercase">ALEX RIVERA</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform" href="#experience">Experience</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform" href="#projects">Projects</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform" href="#education">Education</a>
+</nav>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-fixed-dim transition-colors" data-icon="mail">mail</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-fixed-dim transition-colors" data-icon="call">call</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-fixed-dim transition-colors" data-icon="description">description</span>
+</div>
+</div>
+</header>
+<div class="max-w-max-width mx-auto pt-32 px-margin-desktop flex flex-col md:flex-row gap-gutter">
+<!-- SideNavBar / Skills Sidebar -->
+<aside class="md:w-1/3 flex flex-col gap-8">
+<div class="glass-card rounded-xl p-8 flex flex-col gap-6">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-1">Technical Skills</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Expertise &amp; Proficiency</p>
+</div>
+<div class="space-y-6">
+<!-- Proficiency Bars -->
+<div class="space-y-2">
+<div class="flex justify-between font-label-code text-label-code text-secondary uppercase">
+<span>Python</span>
+<span>90%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient w-[90%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label-code text-label-code text-secondary uppercase">
+<span>Go</span>
+<span>85%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient w-[85%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label-code text-label-code text-secondary uppercase">
+<span>Kubernetes</span>
+<span>95%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient w-[95%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label-code text-label-code text-secondary uppercase">
+<span>AWS</span>
+<span>92%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient w-[92%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label-code text-label-code text-secondary uppercase">
+<span>Terraform</span>
+<span>88%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient w-[88%]"></div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/20">
+<h3 class="font-label-code text-label-code text-on-surface-variant uppercase mb-4">Languages</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-secondary-container/10 border border-secondary-container/30 text-secondary-fixed rounded-full font-label-code text-[11px]">ENGLISH (C2)</span>
+<span class="px-3 py-1 bg-secondary-container/10 border border-secondary-container/30 text-secondary-fixed rounded-full font-label-code text-[11px]">PORTUGUESE (NATIVE)</span>
+</div>
+</div>
+<button class="w-full py-4 bg-primary-container text-on-primary-container font-headline-md font-bold rounded-xl active:scale-[0.98] transition-all hover:shadow-[0_0_20px_rgba(0,240,255,0.3)]">
+                    Download CV
+                </button>
+</div>
+<!-- Side Card: Quick Bio -->
+<div class="glass-card rounded-xl overflow-hidden">
+<div class="h-32 bg-surface-container relative">
+<img class="w-full h-full object-cover opacity-40" data-alt="A macro close-up of a high-tech circuit board with glowing cyan traces and intricate electronic components. The lighting is moody and focused, highlighting the precision engineering and futuristic design. The aesthetic is purely cyber-professional, using a palette of deep slate and vibrant electric blue to evoke a sense of advanced systems architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxFjBBqCL1m99MTjlz40rmhucL0FYqry4eXxqRyqGDTj---A-RCyPv7KdXAxw0RVG7x3Eiutp0Ap6L6HEk7vrnzuKcD19B5MZPupp4HZSmx-N9t-IEsz5X6b4u9Yd1pMXn6QwI-sajhVteYh94zY2NDzzu3Tn24pY_ydy8YBj5cMBuDjhsZaqVb4b2NKzJXYKywGMmjn0QPMQBveKnRCib1cc-mo-rRHu2UvVeYFpb82r6km12c_TDisYI7wqfFMzAiF_pbV2u-ZQ"/>
+</div>
+<div class="p-6">
+<p class="font-body-sm text-on-surface-variant">Systems Architect based in San Francisco, specialized in cloud native transitions.</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:w-2/3 flex flex-col gap-10 pb-20">
+<!-- Hero / Summary Section -->
+<section>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-6 glow-cyan">Systems Architect</h1>
+<div class="glass-card rounded-xl p-8 border-l-4 border-primary-fixed-dim">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                        Expert in <span class="text-primary-container font-semibold">scalable cloud architectures</span> and <span class="text-primary-container font-semibold">distributed systems</span>. Passionate about streamlining CI/CD pipelines and orchestrating complex container environments at global scale.
+                    </p>
+</div>
+</section>
+<!-- Experience Section -->
+<section id="experience">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="work">work</span>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-wider">Experience</h2>
+</div>
+<div class="relative pl-8 border-l border-outline-variant/30 flex flex-col gap-12">
+<!-- Experience Item 1 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-2 border-primary bg-background shadow-[0_0_10px_rgba(0,219,233,0.5)]"></div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-secondary">Senior Systems Architect</h3>
+<span class="font-label-code text-label-code text-on-surface-variant bg-surface-variant/40 px-3 py-1 rounded">2020 — PRESENT</span>
+</div>
+<div class="text-primary-container font-body-md font-semibold">TechCloud Solutions</div>
+<ul class="mt-4 list-disc list-inside space-y-2 font-body-md text-on-surface-variant">
+<li>Led the migration of <span class="text-on-surface">50+ microservices</span> to Kubernetes, improving resource efficiency by 35%.</li>
+<li>Architected high-availability multi-region AWS infrastructure using Terraform and Terragrunt.</li>
+<li>Implemented service mesh (Istio) for secure and observable inter-service communication.</li>
+</ul>
+</div>
+</div>
+<!-- Experience Item 2 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-2 border-outline-variant bg-background hover:border-primary transition-colors"></div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md text-secondary">DevOps Engineer</h3>
+<span class="font-label-code text-label-code text-on-surface-variant bg-surface-variant/40 px-3 py-1 rounded">2017 — 2020</span>
+</div>
+<div class="text-primary-container font-body-md font-semibold">DevOps Pro</div>
+<ul class="mt-4 list-disc list-inside space-y-2 font-body-md text-on-surface-variant">
+<li>Reduced deployment time by <span class="text-on-surface">40%</span> through advanced CI/CD automation and containerization.</li>
+<li>Optimized monitoring stacks using Prometheus, Grafana, and ELK, reducing MTTR by 20%.</li>
+<li>Automated infrastructure provisioning across multiple cloud providers.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects & Education Bento -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projects">
+<!-- Project Card -->
+<div class="glass-card rounded-xl p-8 flex flex-col justify-between hover:border-primary/40 transition-all duration-300">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="terminal">terminal</span>
+<div class="flex items-center gap-1 font-label-code text-label-code text-primary">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                1k+ GitHub Stars
+                            </div>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Open-Source Monitor</h3>
+<p class="font-body-sm text-on-surface-variant mb-6">A lightweight, distributed monitoring tool for edge computing clusters. Built with Go and gRPC.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary-container font-label-code text-label-code hover:underline" href="#">
+                        VIEW REPOSITORY <span class="material-symbols-outlined text-sm" data-icon="arrow_outward">arrow_outward</span>
+</a>
+</div>
+<!-- Education Card -->
+<div class="glass-card rounded-xl p-8 flex flex-col hover:border-secondary/40 transition-all duration-300" id="education">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary" data-icon="school">school</span>
+<h2 class="font-label-code text-label-code text-secondary uppercase tracking-widest">Education</h2>
+</div>
+<div class="mt-auto">
+<h3 class="font-headline-md text-headline-md text-primary">B.S. in Computer Science</h3>
+<p class="font-body-sm text-on-surface-variant mt-2">Specialization in Distributed Systems &amp; Network Security.</p>
+<p class="font-label-code text-[11px] text-secondary-fixed mt-4 tracking-tighter opacity-60">GRADUATED WITH HONORS</p>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-8 border-t border-outline-variant/10 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-max-width mx-auto gap-6">
+<div class="text-secondary font-bold font-label-code">© 2024 Systems Architect Portfolio</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-label-code hover:text-primary glow-cyan transition-shadow opacity-70 hover:opacity-100" href="#">GitHub</a>
+<a class="text-on-surface-variant font-label-code hover:text-primary glow-cyan transition-shadow opacity-70 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-on-surface-variant font-label-code hover:text-primary glow-cyan transition-shadow opacity-70 hover:opacity-100" href="#">Source Code</a>
+</div>
+</div>
+</footer>
+</body></html>
